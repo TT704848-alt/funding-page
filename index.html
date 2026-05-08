@@ -3,376 +3,1080 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>資金管理｜小額借款｜汽機車借款｜債務整合</title>
 
+  <!-- OG 預覽資訊 -->
+
+  <meta property="og:title" content="不確定有沒有機會，至少先搞清楚自己卡在哪">
+
+  <meta property="og:description"
+  content="小額週轉｜債務整合｜汽機車借款｜專人協助評估">
+
+  <meta property="og:image"
+  content="https://tt704848-alt.github.io/funding-page/hero.png">
+
+  <meta property="og:url"
+  content="https://tt704848-alt.github.io/funding-page/">
+
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;background:#fff;color:#222;line-height:1.8}
-    a{text-decoration:none;color:inherit}
-    .container{width:90%;max-width:1180px;margin:auto}
 
-    .navbar{height:78px;background:#fff;position:sticky;top:0;z-index:999;box-shadow:0 4px 18px rgba(0,0,0,.06)}
-    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:900}
-    .logo-mark{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#c8922b,#8a5a12);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
-    .logo small{display:block;color:#999;font-size:11px;letter-spacing:1px;margin-top:-4px}
-    .nav-links{display:flex;gap:20px;font-size:14px;font-weight:700}
-    .nav-links a:hover{color:#b88018}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-    .hero{min-height:620px;background-image:linear-gradient(90deg,rgba(68,42,0,.80),rgba(104,68,8,.60),rgba(0,0,0,.12)),url("hero.png");background-size:cover;background-position:center;display:flex;align-items:center;color:#fff}
-    .hero-content{max-width:720px;padding:90px 0}
-    .hero-content h1{font-size:58px;line-height:1.25;margin-bottom:24px;letter-spacing:2px;color:#fff;text-shadow:0 8px 24px rgba(0,0,0,.35)}
-    .hero-content p{font-size:20px;color:#f5ead8;margin-bottom:34px;font-weight:600}
-    .hero-buttons{display:flex;flex-wrap:wrap;gap:16px}
-    .btn{display:inline-block;padding:15px 34px;border-radius:999px;font-weight:900;transition:.3s;font-size:16px}
-    .btn:hover{transform:translateY(-3px)}
-    .btn-gold{background:linear-gradient(135deg,#d8a23b,#9a681a);color:#fff;box-shadow:0 12px 28px rgba(0,0,0,.22)}
-    .btn-dark{background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.35);color:#fff}
+    html{
+      scroll-behavior:smooth;
+    }
 
-    section{padding:84px 0}
-    .section-title{text-align:center;margin-bottom:52px}
-    .section-title h2{font-size:34px;margin-bottom:6px}
-    .section-title span{color:#9a681a;font-size:12px;letter-spacing:2px;font-weight:900}
+    body{
+      font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+      background:#fff;
+      color:#222;
+      line-height:1.8;
+    }
 
-    .services-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;text-align:center}
-    .service-card{padding:22px 12px;border-radius:24px;transition:.3s}
-    .service-card:hover{background:#fbf6ed;transform:translateY(-8px)}
-    .service-icon{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,#c8922b,#8a5a12);color:white;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:36px;box-shadow:0 12px 26px rgba(138,90,18,.28)}
-    .service-card h3{font-size:18px;margin-bottom:6px}
-    .service-card p{color:#777;font-size:14px}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-    .problem-section{background:#f6eddf}
-    .problem-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;text-align:center}
-    .problem-card{background:rgba(255,255,255,.55);border-radius:20px;padding:24px 10px}
-    .problem-icon{font-size:42px;margin-bottom:10px}
+    .container{
+      width:90%;
+      max-width:1180px;
+      margin:auto;
+    }
 
-    .case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-    .case-card{background:#fff;padding:28px;border-radius:24px;border:1px solid #eee;box-shadow:0 12px 28px rgba(0,0,0,.06)}
-    .case-card h3{font-size:18px;margin-bottom:10px}
-    .case-card p{color:#666;font-size:15px}
+    /* 導覽列 */
 
-    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-    .step-card{background:#fff;border:1px solid #eee;box-shadow:0 12px 28px rgba(0,0,0,.06);border-radius:22px;padding:30px;text-align:center}
-    .step-number{width:50px;height:50px;background:linear-gradient(135deg,#c8922b,#8a5a12);color:#fff;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-weight:900}
+    .navbar{
+      height:78px;
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:999;
+      box-shadow:0 4px 18px rgba(0,0,0,.06);
+    }
 
-    .faq{max-width:900px;margin:auto}
-    .faq-item{background:#fff;border:1px solid #eee;border-radius:18px;padding:24px 28px;margin-bottom:16px;box-shadow:0 8px 22px rgba(0,0,0,.04)}
-    .faq-item h3{font-size:18px;margin-bottom:6px}
-    .faq-item p{color:#666;font-size:15px}
+    .nav-inner{
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
 
-    .form-section{background:linear-gradient(135deg,#d8a23b,#9a681a)}
-    .form-section .section-title h2,.form-section .section-title span{color:#fff}
-    .form-box{max-width:920px;margin:auto}
-    form{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 22px}
-    input,select,textarea{width:100%;padding:15px 18px;border:none;border-radius:999px;font-size:15px;font-family:inherit;outline:none}
-    textarea{grid-column:1 / 3;min-height:110px;border-radius:22px;resize:vertical}
-    .submit-wrap{grid-column:1 / 3;text-align:center;margin-top:10px}
-    .submit-btn{background:#111;color:#fff;border:none;padding:15px 54px;border-radius:999px;font-size:16px;font-weight:900;cursor:pointer;transition:.3s}
-    .submit-btn:hover{background:#333;transform:translateY(-3px)}
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+    }
 
-    .footer-contact{padding:70px 0 30px;background:#fff}
-    .footer-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;border-bottom:1px solid #eee;padding-bottom:34px}
-    .contact-list{margin-top:22px}
-    .contact-list p{color:#555;margin-bottom:8px}
-    .qr-box{justify-self:end;width:140px;height:140px;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px #ddd;background:#fff;display:block}
-    .qr-box img{width:100%;height:100%;object-fit:cover;display:block}
-    footer{text-align:center;color:#999;padding-top:24px;font-size:13px}
+    .logo-mark{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#c8922b,#8a5a12);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+    }
 
-    .floating-line{position:fixed;right:20px;bottom:20px;background:#06C755;color:white;padding:15px 24px;border-radius:999px;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:99999;transition:.3s}
-    .floating-line:hover{background:#05b04a;transform:translateY(-3px)}
+    .logo small{
+      display:block;
+      color:#999;
+      font-size:11px;
+      letter-spacing:1px;
+      margin-top:-4px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .nav-links a:hover{
+      color:#b88018;
+    }
+
+    /* 首頁橫幅 */
+
+    .hero{
+      min-height:620px;
+
+      background-image:
+      linear-gradient(
+      90deg,
+      rgba(68,42,0,.80),
+      rgba(104,68,8,.60),
+      rgba(0,0,0,.12)
+      ),
+      url("hero.png");
+
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      color:#fff;
+    }
+
+    .hero-content{
+      max-width:720px;
+      padding:90px 0;
+    }
+
+    .hero-content h1{
+      font-size:58px;
+      line-height:1.25;
+      margin-bottom:24px;
+      letter-spacing:2px;
+      color:#fff;
+      text-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+
+    .hero-content p{
+      font-size:20px;
+      color:#f5ead8;
+      margin-bottom:34px;
+      font-weight:600;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 34px;
+      border-radius:999px;
+      font-weight:900;
+      transition:.3s;
+      font-size:16px;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-gold{
+      background:linear-gradient(135deg,#d8a23b,#9a681a);
+      color:#fff;
+      box-shadow:0 12px 28px rgba(0,0,0,.22);
+    }
+
+    .btn-dark{
+      background:rgba(0,0,0,.72);
+      border:1px solid rgba(255,255,255,.35);
+      color:#fff;
+    }
+
+    /* 共用 */
+
+    section{
+      padding:84px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:52px;
+    }
+
+    .section-title h2{
+      font-size:34px;
+      margin-bottom:6px;
+    }
+
+    .section-title span{
+      color:#9a681a;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:900;
+    }
+
+    /* 服務項目 */
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:22px;
+      text-align:center;
+    }
+
+    .service-card{
+      padding:22px 12px;
+      border-radius:24px;
+      transition:.3s;
+    }
+
+    .service-card:hover{
+      background:#fbf6ed;
+      transform:translateY(-8px);
+    }
+
+    .service-icon{
+      width:86px;
+      height:86px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#c8922b,#8a5a12);
+      color:white;
+      margin:0 auto 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:36px;
+      box-shadow:0 12px 26px rgba(138,90,18,.28);
+    }
+
+    .service-card h3{
+      font-size:18px;
+      margin-bottom:6px;
+    }
+
+    .service-card p{
+      color:#777;
+      font-size:14px;
+    }
+
+    /* 面臨問題 */
+
+    .problem-section{
+      background:#f6eddf;
+    }
+
+    .problem-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:18px;
+      text-align:center;
+    }
+
+    .problem-card{
+      background:rgba(255,255,255,.55);
+      border-radius:20px;
+      padding:24px 10px;
+    }
+
+    .problem-icon{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    /* 成功案例 */
+
+    .case-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+
+    .case-card{
+      background:#fff;
+      padding:28px;
+      border-radius:24px;
+      border:1px solid #eee;
+      box-shadow:0 12px 28px rgba(0,0,0,.06);
+    }
+
+    .case-card h3{
+      font-size:18px;
+      margin-bottom:10px;
+    }
+
+    .case-card p{
+      color:#666;
+      font-size:15px;
+    }
+
+    /* 流程 */
+
+    .steps-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:22px;
+    }
+
+    .step-card{
+      background:#fff;
+      border:1px solid #eee;
+      box-shadow:0 12px 28px rgba(0,0,0,.06);
+      border-radius:22px;
+      padding:30px;
+      text-align:center;
+    }
+
+    .step-number{
+      width:50px;
+      height:50px;
+      background:linear-gradient(135deg,#c8922b,#8a5a12);
+      color:#fff;
+      border-radius:50%;
+      margin:0 auto 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+    }
+
+    /* FAQ */
+
+    .faq{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .faq-item{
+      background:#fff;
+      border:1px solid #eee;
+      border-radius:18px;
+      padding:24px 28px;
+      margin-bottom:16px;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+    }
+
+    .faq-item h3{
+      font-size:18px;
+      margin-bottom:6px;
+    }
+
+    .faq-item p{
+      color:#666;
+      font-size:15px;
+    }
+
+    /* 表單 */
+
+    .form-section{
+      background:linear-gradient(135deg,#d8a23b,#9a681a);
+    }
+
+    .form-section .section-title h2,
+    .form-section .section-title span{
+      color:#fff;
+    }
+
+    .form-box{
+      max-width:920px;
+      margin:auto;
+    }
+
+    form{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px 22px;
+    }
+
+    input,
+    select{
+      width:100%;
+      padding:15px 18px;
+      border:none;
+      border-radius:999px;
+      font-size:15px;
+      font-family:inherit;
+      outline:none;
+    }
+
+    .submit-wrap{
+      grid-column:1 / 3;
+      text-align:center;
+      margin-top:10px;
+    }
+
+    .submit-btn{
+      background:#111;
+      color:#fff;
+      border:none;
+      padding:15px 54px;
+      border-radius:999px;
+      font-size:16px;
+      font-weight:900;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .submit-btn:hover{
+      background:#333;
+      transform:translateY(-3px);
+    }
+
+    /* 頁尾 */
+
+    .footer-contact{
+      padding:70px 0 30px;
+      background:#fff;
+    }
+
+    .footer-inner{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+      border-bottom:1px solid #eee;
+      padding-bottom:34px;
+    }
+
+    .contact-list{
+      margin-top:22px;
+    }
+
+    .contact-list p{
+      color:#555;
+      margin-bottom:8px;
+    }
+
+    .qr-box{
+      justify-self:end;
+      width:140px;
+      height:140px;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 0 0 1px #ddd;
+      background:#fff;
+      display:block;
+    }
+
+    .qr-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    footer{
+      text-align:center;
+      color:#999;
+      padding-top:24px;
+      font-size:13px;
+    }
+
+    /* 浮動LINE */
+
+    .floating-line{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      background:#06C755;
+      color:white;
+      padding:15px 24px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+      z-index:99999;
+      transition:.3s;
+    }
+
+    .floating-line:hover{
+      background:#05b04a;
+      transform:translateY(-3px);
+    }
+
+    /* 手機版 */
 
     @media (max-width:980px){
-      .nav-links{display:none}
-      .hero-content h1{font-size:42px}
-      .services-grid{grid-template-columns:repeat(2,1fr)}
-      .problem-grid{grid-template-columns:repeat(3,1fr)}
-      .case-grid,.steps-grid{grid-template-columns:repeat(2,1fr)}
-      .footer-inner{grid-template-columns:1fr;text-align:center}
-      .qr-box{justify-self:center}
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .services-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .problem-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .case-grid,
+      .steps-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .footer-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .qr-box{
+        justify-self:center;
+      }
     }
 
     @media (max-width:600px){
-      .hero{min-height:auto;background-position:center right}
-      .hero-content{padding:76px 0}
-      .hero-content h1{font-size:34px}
-      .hero-content p{font-size:16px}
-      .hero-buttons{flex-direction:column}
-      .btn{text-align:center}
-      section{padding:64px 0}
-      .services-grid,.problem-grid,.case-grid,.steps-grid{grid-template-columns:1fr}
-      form{grid-template-columns:1fr}
-      textarea,.submit-wrap{grid-column:1}
-      .floating-line{right:14px;bottom:14px;padding:13px 18px;font-size:14px}
+
+      .hero{
+        min-height:auto;
+        background-position:center right;
+      }
+
+      .hero-content{
+        padding:76px 0;
+      }
+
+      .hero-content h1{
+        font-size:34px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+      }
+
+      .btn{
+        text-align:center;
+      }
+
+      section{
+        padding:64px 0;
+      }
+
+      .services-grid,
+      .problem-grid,
+      .case-grid,
+      .steps-grid{
+        grid-template-columns:1fr;
+      }
+
+      form{
+        grid-template-columns:1fr;
+      }
+
+      .submit-wrap{
+        grid-column:1;
+      }
+
+      .floating-line{
+        right:14px;
+        bottom:14px;
+        padding:13px 18px;
+        font-size:14px;
+      }
     }
+
   </style>
+
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="container nav-inner">
-    <a href="#home" class="logo">
-      <div class="logo-mark">TT</div>
-      <div>
-        資金管理
-        <small>FUNDING SERVICE</small>
-      </div>
-    </a>
+  <!-- 導覽列 -->
 
-    <div class="nav-links">
-      <a href="#home">首頁</a>
-      <a href="#services">服務項目</a>
-      <a href="#case">成功案例</a>
-      <a href="#process">流程說明</a>
-      <a href="#faq">常見問題</a>
-      <a href="#contact">聯絡我們</a>
-    </div>
-  </div>
-</nav>
+  <nav class="navbar">
 
-<header class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <h1>不確定有沒有機會<br>至少先搞清楚自己卡在哪</h1>
-      <p>專人協助｜流程透明｜合法實體配合</p>
+    <div class="container nav-inner">
 
-      <div class="hero-buttons">
-        <a href="https://line.me/ti/p/RtlBXndxyY" class="btn btn-gold">立即諮詢</a>
-        <a href="#form" class="btn btn-dark">填寫評估</a>
-      </div>
-    </div>
-  </div>
-</header>
+      <a href="#home" class="logo">
 
-<section id="services">
-  <div class="container">
-    <div class="section-title">
-      <h2>我們的服務</h2>
-      <span>OUR SERVICE</span>
-    </div>
+        <div class="logo-mark">TT</div>
 
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">💰</div><h3>小額週轉</h3><p>短期資金需求評估</p></div>
-      <div class="service-card"><div class="service-icon">⚖️</div><h3>債務整合</h3><p>協助降低月付壓力</p></div>
-      <div class="service-card"><div class="service-icon">🚗</div><h3>汽機車借款</h3><p>有車可協助評估方案</p></div>
-      <div class="service-card"><div class="service-icon">📋</div><h3>信用評估</h3><p>依照目前條件提供方向</p></div>
-      <div class="service-card"><div class="service-icon">🤝</div><h3>民間整合</h3><p>針對現有壓力協助評估</p></div>
-      <div class="service-card"><div class="service-icon">✨</div><h3>客制專案</h3><p>依需求與條件提供方案</p></div>
-    </div>
-  </div>
-</section>
+        <div>
+          資金管理
+          <small>FUNDING SERVICE</small>
+        </div>
 
-<section class="problem-section">
-  <div class="container">
-    <div class="section-title">
-      <h2>你目前面臨的問題</h2>
-      <span>THE PROBLEM YOU ARE CURRENTLY FACING</span>
-    </div>
+      </a>
 
-    <div class="problem-grid">
-      <div class="problem-card"><div class="problem-icon">💸</div><h3>負債比過高</h3></div>
-      <div class="problem-card"><div class="problem-icon">🧾</div><h3>無薪轉</h3></div>
-      <div class="problem-card"><div class="problem-icon">⚠️</div><h3>信用瑕疵</h3></div>
-      <div class="problem-card"><div class="problem-icon">⏰</div><h3>急需週轉</h3></div>
-      <div class="problem-card"><div class="problem-icon">🚫</div><h3>貸款被婉拒</h3></div>
-      <div class="problem-card"><div class="problem-icon">🔒</div><h3>警示戶</h3></div>
-    </div>
-  </div>
-</section>
-
-<section id="case">
-  <div class="container">
-    <div class="section-title">
-      <h2>成功案例</h2>
-      <span>SUCCESS CASE</span>
-    </div>
-
-    <div class="case-grid">
-      <div class="case-card">
-        <h3>協助64歲＊小姐 成功核貸5萬5</h3>
-        <p>快要65歲的＊小姐，因季節關係，資金吃緊，急需繳房租。</p>
+      <div class="nav-links">
+        <a href="#home">首頁</a>
+        <a href="#services">服務項目</a>
+        <a href="#case">成功案例</a>
+        <a href="#process">流程說明</a>
+        <a href="#faq">常見問題</a>
+        <a href="#contact">聯絡我們</a>
       </div>
 
-      <div class="case-card">
-        <h3>協助21歲＊先生 成功核貸7萬</h3>
-        <p>義務役的＊先生，因休假外出時跟人發生擦撞，急需修車。</p>
-      </div>
-
-      <div class="case-card">
-        <h3>協助32歲＊小姐 成功核貸23萬</h3>
-        <p>做代購的＊小姐，因常常要出國帶貨，但信用卡額度實在不夠用，帶現金又麻煩，協助辦理高額信用卡，成功過件。</p>
-      </div>
-
-      <div class="case-card">
-        <h3>協助56歲＊先生 成功核貸85萬</h3>
-        <p>工人＊先生，想整合債務，降低月繳，提高生活品質。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="container">
-    <div class="section-title">
-      <h2>流程說明</h2>
-      <span>PROCESS</span>
     </div>
 
-    <div class="steps-grid">
-      <div class="step-card"><div class="step-number">1</div><h3>填寫資料</h3></div>
-      <div class="step-card"><div class="step-number">2</div><h3>專人評估聯繫</h3></div>
-      <div class="step-card"><div class="step-number">3</div><h3>確認適合方案</h3></div>
-      <div class="step-card"><div class="step-number">4</div><h3>安排後續流程</h3></div>
-    </div>
-  </div>
-</section>
+  </nav>
 
-<section id="faq">
-  <div class="container">
-    <div class="section-title">
-      <h2>常見問題</h2>
-      <span>FAQ</span>
-    </div>
+  <!-- 首頁 -->
 
-    <div class="faq">
-      <div class="faq-item">
-        <h3>Q：聯徵會影響信用嗎？</h3>
-        <p>依照方案不同會有不同評估方式，可先詢問了解。</p>
+  <header class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1>
+          不確定有沒有機會<br>
+          至少先搞清楚自己卡在哪
+        </h1>
+
+        <p>
+          專人協助｜流程透明｜合法實體配合
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="https://line.me/ti/p/RtlBXndxyY"
+          class="btn btn-gold">
+          立即諮詢
+          </a>
+
+          <a href="#form"
+          class="btn btn-dark">
+          填寫評估
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="faq-item">
-        <h3>Q：一定要有薪轉嗎？</h3>
-        <p>不一定，會依整體條件評估。</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Q：多久會有人聯絡？</h3>
-        <p>通常送出後會盡快聯繫。</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Q：資料會外流嗎？</h3>
-        <p>個資皆僅供評估使用，會妥善保密。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="form-section" id="form">
-  <div class="container form-box">
-    <div class="section-title">
-      <h2>免費諮詢表單</h2>
-      <span>FREE CONSULTATION</span>
     </div>
 
-    <form id="leadForm">
-      <input type="text" name="姓名" placeholder="姓名（必填）" required>
-      <input type="tel" name="電話" placeholder="電話（必填）" required>
-      <input type="text" name="LINE" placeholder="LINE">
+  </header>
 
-      <select name="工作類型">
-        <option value="">工作類型</option>
-        <option>正職</option>
-        <option>兼職</option>
-        <option>自營商</option>
-        <option>領現</option>
-        <option>待業中</option>
-        <option>其他</option>
-      </select>
+  <!-- 服務 -->
 
-      <input type="text" name="月收入" placeholder="月收入">
+  <section id="services">
 
-      <select name="諮詢項目">
-        <option value="">諮詢項目</option>
-        <option>小額週轉</option>
-        <option>汽機車借款</option>
-        <option>債務整合</option>
-        <option>信用評估</option>
-        <option>民間整合</option>
-        <option>客制專案</option>
-      </select>
+    <div class="container">
 
-      <input type="text" name="資金需求" placeholder="資金需求">
-      <input type="text" name="備註" placeholder="備註：例：20點前聯絡">
-
-      <div class="submit-wrap">
-        <button type="submit" class="submit-btn">確認送出</button>
+      <div class="section-title">
+        <h2>我們的服務</h2>
+        <span>OUR SERVICE</span>
       </div>
-    </form>
-  </div>
-</section>
 
-<section class="footer-contact" id="contact">
-  <div class="container">
-    <div class="footer-inner">
-      <div>
-        <a href="#home" class="logo">
-          <div class="logo-mark">TT</div>
-          <div>
-            資金管理
-            <small>FUNDING SERVICE</small>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">💰</div>
+          <h3>小額週轉</h3>
+          <p>短期資金需求評估</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h3>債務整合</h3>
+          <p>協助降低月付壓力</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>汽機車借款</h3>
+          <p>有車可協助評估方案</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>信用評估</h3>
+          <p>依照目前條件提供方向</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <h3>民間整合</h3>
+          <p>針對現有壓力協助評估</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>客制專案</h3>
+          <p>依需求與條件提供方案</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 問題 -->
+
+  <section class="problem-section">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>你目前面臨的問題</h2>
+        <span>THE PROBLEM YOU ARE CURRENTLY FACING</span>
+      </div>
+
+      <div class="problem-grid">
+
+        <div class="problem-card">
+          <div class="problem-icon">💸</div>
+          <h3>負債比過高</h3>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">🧾</div>
+          <h3>無薪轉</h3>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">⚠️</div>
+          <h3>信用瑕疵</h3>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">⏰</div>
+          <h3>急需週轉</h3>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">🚫</div>
+          <h3>貸款被婉拒</h3>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">🔒</div>
+          <h3>警示戶</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 成功案例 -->
+
+  <section id="case">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>成功案例</h2>
+        <span>SUCCESS CASE</span>
+      </div>
+
+      <div class="case-grid">
+
+        <div class="case-card">
+          <h3>協助64歲＊小姐 成功核貸5萬5</h3>
+          <p>
+            快要65歲的＊小姐，
+            因季節關係，資金吃緊，
+            急需繳房租。
+          </p>
+        </div>
+
+        <div class="case-card">
+          <h3>協助21歲＊先生 成功核貸7萬</h3>
+          <p>
+            義務役的＊先生，
+            因休假外出時跟人發生擦撞，
+            急需修車。
+          </p>
+        </div>
+
+        <div class="case-card">
+          <h3>協助32歲＊小姐 成功核貸23萬</h3>
+          <p>
+            做代購的＊小姐，
+            因常常要出國帶貨，
+            但信用卡額度實在不夠用，
+            帶現金又麻煩，
+            協助辦理高額信用卡，
+            成功過件。
+          </p>
+        </div>
+
+        <div class="case-card">
+          <h3>協助56歲＊先生 成功核貸85萬</h3>
+          <p>
+            工人＊先生，
+            想整合債務，
+            降低月繳，
+            提高生活品質。
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 流程 -->
+
+  <section id="process">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>流程說明</h2>
+        <span>PROCESS</span>
+      </div>
+
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>填寫資料</h3>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>專人評估聯繫</h3>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>確認適合方案</h3>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>安排後續流程</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+
+  <section id="faq">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>常見問題</h2>
+        <span>FAQ</span>
+      </div>
+
+      <div class="faq">
+
+        <div class="faq-item">
+          <h3>Q：聯徵會影響信用嗎？</h3>
+          <p>依照方案不同會有不同評估方式，可先詢問了解。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q：一定要有薪轉嗎？</h3>
+          <p>不一定，會依整體條件評估。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q：多久會有人聯絡？</h3>
+          <p>通常送出後會盡快聯繫。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q：資料會外流嗎？</h3>
+          <p>個資皆僅供評估使用，會妥善保密。</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 表單 -->
+
+  <section class="form-section" id="form">
+
+    <div class="container form-box">
+
+      <div class="section-title">
+        <h2>免費諮詢表單</h2>
+        <span>FREE CONSULTATION</span>
+      </div>
+
+      <form id="leadForm">
+
+        <input type="text"
+        name="姓名"
+        placeholder="姓名（必填）"
+        required>
+
+        <input type="tel"
+        name="電話"
+        placeholder="電話（必填）"
+        required>
+
+        <input type="text"
+        name="LINE"
+        placeholder="LINE">
+
+        <select name="工作類型">
+          <option value="">工作類型</option>
+          <option>正職</option>
+          <option>兼職</option>
+          <option>自營商</option>
+          <option>領現</option>
+          <option>待業中</option>
+          <option>其他</option>
+        </select>
+
+        <input type="text"
+        name="月收入"
+        placeholder="月收入">
+
+        <select name="諮詢項目">
+          <option value="">諮詢項目</option>
+          <option>小額週轉</option>
+          <option>汽機車借款</option>
+          <option>債務整合</option>
+          <option>信用評估</option>
+          <option>民間整合</option>
+          <option>客制專案</option>
+        </select>
+
+        <input type="text"
+        name="資金需求"
+        placeholder="資金需求">
+
+        <input type="text"
+        name="備註"
+        placeholder="備註：例：20點前聯絡">
+
+        <div class="submit-wrap">
+
+          <button type="submit"
+          class="submit-btn">
+          確認送出
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- 頁尾 -->
+
+  <section class="footer-contact" id="contact">
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div>
+
+          <a href="#home" class="logo">
+
+            <div class="logo-mark">TT</div>
+
+            <div>
+              資金管理
+              <small>FUNDING SERVICE</small>
+            </div>
+
+          </a>
+
+          <div class="contact-list">
+
+            <p><strong>LINE：</strong>tt704848</p>
+
+            <p><strong>電話：</strong>0909704848</p>
+
+            <p><strong>營業時間：</strong>24H</p>
+
           </div>
+
+        </div>
+
+        <!-- QR -->
+
+        <a href="https://line.me/ti/p/RtlBXndxyY"
+        class="qr-box">
+
+          <img src="line-qr.png"
+          alt="LINE QR Code">
+
         </a>
 
-        <div class="contact-list">
-          <p><strong>LINE：</strong>tt704848</p>
-          <p><strong>電話：</strong>0909704848</p>
-          <p><strong>營業時間：</strong>24H</p>
-        </div>
       </div>
 
-      <a href="https://line.me/ti/p/RtlBXndxyY" class="qr-box">
-        <img src="line-qr.png" alt="LINE QR Code">
-      </a>
+      <footer>
+        本頁資訊僅供初步諮詢與評估，
+        實際結果仍需依個人條件與審核結果為準。
+      </footer>
+
     </div>
 
-    <footer>
-      本頁資訊僅供初步諮詢與評估，實際結果仍需依個人條件與審核結果為準。
-    </footer>
-  </div>
-</section>
+  </section>
 
-<a href="https://line.me/ti/p/RtlBXndxyY" class="floating-line">
+  <!-- 浮動LINE -->
+
+  <a href="https://line.me/ti/p/RtlBXndxyY"
+  class="floating-line">
   LINE 立即詢問
-</a>
+  </a>
 
-<script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxujVMDItqp0nt2e8n2cCE0p0B_H3WtHjNDzWFM2dJqyqFAAIHroskKwIVT5ApAyLUQ/exec";
+  <!-- 表單送出 -->
 
-  document.getElementById("leadForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+  <script>
 
-    const formData = new FormData(this);
-    const submitBtn = this.querySelector(".submit-btn");
+    const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxujVMDItqp0nt2e8n2cCE0p0B_H3WtHjNDzWFM2dJqyqFAAIHroskKwIVT5ApAyLUQ/exec";
 
-    submitBtn.disabled = true;
-    submitBtn.innerText = "送出中...";
+    document
+    .getElementById("leadForm")
+    .addEventListener("submit", function(e){
 
-    fetch(scriptURL, {
-      method: "POST",
-      body: formData
-    })
-    .then(() => {
+      e.preventDefault();
 
-  alert("資料已送出，將為您跳轉 LINE。");
+      const formData = new FormData(this);
 
-  document.getElementById("leadForm").reset();
+      const submitBtn =
+      this.querySelector(".submit-btn");
 
-  submitBtn.disabled = false;
-  submitBtn.innerText = "確認送出";
+      submitBtn.disabled = true;
 
-  window.location.href =
-  "https://line.me/ti/p/RtlBXndxyY";
+      submitBtn.innerText = "送出中...";
 
-})
-    .catch(() => {
-      alert("送出失敗，請直接加 LINE 詢問。");
-      submitBtn.disabled = false;
-      submitBtn.innerText = "確認送出";
+      fetch(scriptURL, {
+        method:"POST",
+        body:formData
+      })
+
+      .then(() => {
+
+        alert("資料已送出，將為您跳轉 LINE。");
+
+        document
+        .getElementById("leadForm")
+        .reset();
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerText = "確認送出";
+
+        window.location.href =
+        "https://line.me/ti/p/RtlBXndxyY";
+
+      })
+
+      .catch(() => {
+
+        alert("送出失敗，請直接加 LINE 詢問。");
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerText = "確認送出";
+
+      });
+
     });
-  });
-</script>
+
+  </script>
 
 </body>
 </html>
